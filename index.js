@@ -15,7 +15,9 @@ function App(){
 
     }
     function reset(){
-
+       clearInterval(intervalRef.current);
+       intervalRef.current=null;
+       setTime(0);
     }
     return (
         <div id="watch">
