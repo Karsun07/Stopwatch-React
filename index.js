@@ -1,14 +1,17 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import ReactDOM from "react-dom/client";
 
 function App(){
     const [time,setTime]=useState(0);
+    const intervalRef=useRef(null);
     function start(){
-        setInterval(()=>{
+        intervalRef.current=setInterval(()=>{
             setTime((time)=>time+1);
         },1000)
     }
     function stop(){
+        clearInterval(intervalRef.current);
+        intervalRef.current=null;
 
     }
     function reset(){
