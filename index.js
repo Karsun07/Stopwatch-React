@@ -3,12 +3,21 @@ import ReactDOM from "react-dom/client";
 
 function App(){
     const [time,setTime]=useState(0);
+    function start(){
+        setInterval(()=>setTime(time+1));
+    }
+    function stop(){
+
+    }
+    function reset(){
+
+    }
     return (
         <div id="watch">
             <h1>{time}</h1>
-            <button>Start</button>
-            <button>Stop</button>
-            <button>Reset</button>
+            <button onClick={start}>Start</button>
+            <button onClick={stop}>Stop</button>
+            <button onClick={reset}>Reset</button>
         </div>
     )
 
