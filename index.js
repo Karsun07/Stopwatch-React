@@ -4,7 +4,9 @@ import ReactDOM from "react-dom/client";
 function App(){
     const [time,setTime]=useState(0);
     function start(){
-        setInterval(()=>setTime(time+1));
+        setInterval(()=>{
+            setTime((time)=>time+1);
+        },1000)
     }
     function stop(){
 
