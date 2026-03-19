@@ -1,0 +1,55 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #2a38a6, #181114);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#watch {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+#watch h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+button {
+    margin: 8px;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:nth-child(2) {
+    background-color: #00b894;
+    color: white;
+}
+
+button:nth-child(3) {
+    background-color: #d63031;
+    color: white;
+}
+
+button:nth-child(4) {
+    background-color: #0984e3;
+    color: white;
+}
+
+button:hover {
+    transform: scale(1.08);
+    opacity: 0.9;
+}
