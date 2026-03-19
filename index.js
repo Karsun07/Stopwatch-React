@@ -4,10 +4,14 @@ import ReactDOM from "react-dom/client";
 function App(){
     const [time,setTime]=useState(0);
     const intervalRef=useRef(null);
+    const [intervalRunning,setIntervalRunning]=useState(false);
     function start(){
-        intervalRef.current=setInterval(()=>{
+        if(!intervalRunning){
+            intervalRef.current=setInterval(()=>{
             setTime((time)=>time+1);
         },1000)
+        setIntervalRunning(true);
+        }
     }
     function stop(){
         clearInterval(intervalRef.current);
