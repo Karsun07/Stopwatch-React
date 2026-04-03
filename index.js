@@ -16,7 +16,6 @@ function App(){
     function stop(){
         clearInterval(intervalRef.current);
         intervalRef.current=null;
-
     }
     function reset(){
        clearInterval(intervalRef.current);
